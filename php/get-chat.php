@@ -12,18 +12,29 @@
         if(mysqli_num_rows($query) > 0){
             while($row = mysqli_fetch_assoc($query)){
                 if($row['outgoing_msg_id'] === $outgoing_id){
+                    if ($row['isimg']==0){
                     $output .= '<div class="chat outgoing">
                                 <div class="details">
                                     <p>'. $row['msg'] .'</p>
                                 </div>
                                 </div>';
+                    }
+                    else{
+                        $output .= '<div class="chat outgoing">
+                                <div class="details">
+                                <img src="php/images/'.$row['msg'].'" alt="">
+                                </div>
+                                </div>';
+                    }
                 }else{
+                    if (row['isimg']==0){
                     $output .= '<div class="chat incoming">
                                 <img src="php/images/'.$row['img'].'" alt="">
                                 <div class="details">
                                     <p>'. $row['msg'] .'</p>
                                 </div>
                                 </div>';
+                    }
                 }
             }
         }else{
