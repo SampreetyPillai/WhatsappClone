@@ -26,7 +26,16 @@
           <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
           <p><?php echo $row['status']; ?></p>
         </div>
-        <a style = "padding-left:170px;color:black;" href = "www.google.com" type = "button" class = "fas fa-download"></a>
+        <form action="export.php" method="post">
+        <!-- Add any data you want to send via POST in hidden input fields -->
+        <!-- <input type="hidden" name="param1" value="value1">
+        <input type="hidden" name="param2" value="value2"> -->
+
+        <!-- The button with the download icon -->
+        <button type="submit" style="padding-left: 170px; color: black; background: none; border: none;">
+            <i class="fas fa-download"></i>
+        </button>
+    </form>
       </header>
       <div class="chat-box">
 
@@ -39,8 +48,8 @@
         <a type = "button" href = <?php echo 'http://localhost:3030/video'.$user_id;?> class = "fas fa-video"></a>
 
 
-        <label for="file-upload" class="custom-file-upload"><i class="fas fa-paperclip"></i></label>
-          <input id="file-upload" type="file"/>
+        <label for="file-upload" name class="custom-file-upload"><i class="fas fa-paperclip"></i></label>
+       <input type="file" id="file-upload" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg">
 
 
       </form>
