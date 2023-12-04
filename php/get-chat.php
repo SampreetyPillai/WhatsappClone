@@ -15,7 +15,7 @@
                     if ($row['isimg']==0){
                     $output .= '<div class="chat outgoing">
                                 <div class="details">
-                                    <p>'. $row['msg'] .'</p>
+                                    <p>'. $row['msg'] .'</p><h6 style="color:gray;">'. $row['last_seen'] .'</h6>
                                 </div>
                                 </div>';
                     }
@@ -27,11 +27,11 @@
                                 </div>';
                     }
                 }else{
-                    if (row['isimg']==0){
+                    if ($row['isimg']==0){
                     $output .= '<div class="chat incoming">
                                 <img src="php/images/'.$row['img'].'" alt="">
                                 <div class="details">
-                                    <p>'. $row['msg'] .'</p>
+                                    <p>'. $row['msg'] .'</p><h6 style="color:gray;">'. $row['last_seen'] .'</h6>
                                 </div>
                                 </div>';
                     }

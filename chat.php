@@ -25,6 +25,7 @@
         <div class="details" style="align:left">
           <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
           <p><?php echo $row['status']; ?></p>
+          <h6 style="color:grey"><?php echo 'Last seen: '.$row['last_seen']; ?></h6>
         </div>
         <form action="export.php" method="post">
         <!-- Add any data you want to send via POST in hidden input fields -->
@@ -45,7 +46,7 @@
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">
         <button><i class="fab fa-telegram-plane"></i></button>
-        <a type = "button" href = <?php echo 'http://localhost:3030/video'.$user_id;?> class = "fas fa-video"></a>
+        <a type = "button" target = "_blank" href = <?php echo 'http://localhost:3030/video';?> class = "fas fa-video"></a>
 
 
         <label for="file-upload" name class="custom-file-upload"><i class="fas fa-paperclip"></i></label>

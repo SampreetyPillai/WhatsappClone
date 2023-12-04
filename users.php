@@ -21,6 +21,7 @@
           <div class="details">
             <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
             <p><?php echo $row['status']; ?></p>
+            <h6 style="color:grey"><?php echo 'Last seen: '.$row['last_seen']; ?></h6>
           </div>
         </div>
         <div class = "user_header_right">
