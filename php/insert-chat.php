@@ -22,13 +22,13 @@
                     $new_img_name = $time.$img_name;
                     if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                         $ran_id = rand(time(), 100000000);
-                        $sql = mysqli_query($conn, "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg, isimg, last_seen)
+                        $sql = mysqli_query($conn, "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg, isimg, timestamp)
                         VALUES ({$incoming_id}, {$outgoing_id},'{$new_img_name}', 1, '{$date}')") or die();
                        
                     }}}
         }
         if(!empty($message)){
-            $insert_query = mysqli_query($conn, "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg, isimg, last_seen)
+            $insert_query = mysqli_query($conn, "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg, isimg, timestamp)
             VALUES ({$incoming_id}, {$outgoing_id}, '{$message}', 0, '{$date}')");
            
         }

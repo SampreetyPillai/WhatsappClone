@@ -7,9 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $outgoing_id = $_SESSION['unique_id'];
 $incoming_id = $_POST['incoming_id'];
 $output = "";
-$sql = "SELECT * FROM messages LEFT JOIN users ON users.unique_id = messages.outgoing_msg_id
-                WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id})
-                OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id";
+$sql = "SELECT * FROM messages LEFT JOIN users ON users.unique_id = messages.outgoing_msg_id WHERE (outgoing_msg_id = {$outgoing_id} AND incoming_msg_id = {$incoming_id}) OR (outgoing_msg_id = {$incoming_id} AND incoming_msg_id = {$outgoing_id}) ORDER BY msg_id";
+// $sql = "SELECT * FROM messages ";
 $query = mysqli_query($conn, $sql);
 $filename = time() . "_chat.txt";
 
@@ -18,6 +17,7 @@ while ($row = mysqli_fetch_assoc($query)) {
     // Modify this part based on the structure of your data
     $fileContent .= "Sender: " . $row['fname'] . " " . $row['lname'] . "\n";
     $fileContent .= "Message: " . $row['msg'] . "\n";
+    $fileContent .= "Timestamp: " . $row['timestamp'] . "\n";
     $fileContent .= "-----------------\n";
 }
 

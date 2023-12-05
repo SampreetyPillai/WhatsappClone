@@ -15,14 +15,14 @@
                     if ($row['isimg']==0){
                     $output .= '<div class="chat outgoing">
                                 <div class="details">
-                                    <p>'. $row['msg'] .'</p><h6 style="color:gray;">'. $row['last_seen'] .'</h6>
+                                    <p>'. $row['msg'] .'</p><h6 style="color:gray;">'. $row['timestamp'] .'</h6>
                                 </div>
                                 </div>';
                     }
                     else{
                         $output .= '<div class="chat outgoing">
                                 <div class="details">
-                                <img src="php/images/'.$row['msg'].'" alt="">
+                                <p><img src="php/images/'.$row['msg'].'" alt="" width ="225" height="225" ></p><h6 style="color:gray;">'. $row['timestamp'] .'</h6>
                                 </div>
                                 </div>';
                     }
@@ -31,7 +31,15 @@
                     $output .= '<div class="chat incoming">
                                 <img src="php/images/'.$row['img'].'" alt="">
                                 <div class="details">
-                                    <p>'. $row['msg'] .'</p><h6 style="color:gray;">'. $row['last_seen'] .'</h6>
+                                    <p>'. $row['msg'] .'</p><h6 style="color:gray;">'. $row['timestamp'] .'</h6>
+                                </div>
+                                </div>';
+                    }
+                    else{
+                        $output .= '<div class="chat incoming">
+                                <img src="php/images/'.$row['img'].'" alt="">
+                                <div class="details">
+                                <p><img src="php/images/'.$row['msg'].'" alt="" height="225" width="225" ></p><h6 style="color:gray;">'. $row['timestamp'] .'</h6>
                                 </div>
                                 </div>';
                     }
