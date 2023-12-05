@@ -27,7 +27,8 @@
           <p><?php echo $row['status']; ?></p>
           <h6 style="color:grey"><?php echo 'Last seen: '.$row['last_seen']; ?></h6>
         </div>
-        <form action="export.php" method="post">
+        <form action="php/export.php" method="post">
+        <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <!-- Add any data you want to send via POST in hidden input fields -->
         <!-- <input type="hidden" name="param1" value="value1">
         <input type="hidden" name="param2" value="value2"> -->

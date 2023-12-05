@@ -33,7 +33,7 @@ CREATE TABLE `messages` (
   `outgoing_msg_id` int(255) NOT NULL,
   `msg` varchar(1000) NOT NULL,
   `isimg` int, 
-  `last_seen` datetime
+  `timestamp` datetime
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
