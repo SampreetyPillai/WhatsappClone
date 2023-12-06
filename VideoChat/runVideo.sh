@@ -1,0 +1,2 @@
+cd VideoChat
+nodemon server

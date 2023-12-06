@@ -38,10 +38,17 @@
         <button type="submit" style="padding-left: 250px; color: black; background: none; border: none;">
             <i class="fas fa-download" ></i>
         </button>
+        
+        
     </form>
+    <button id="disappearing" style="padding-left: 250px; color: black; background: none; border: none;">
+            <i class="fas fa-minus-circle" ></i>
+    </button>
+
 
 
       </header>
+
       <div class="chat-box">
 
       </div>

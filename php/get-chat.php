@@ -11,6 +11,16 @@
         $query = mysqli_query($conn, $sql);
         if(mysqli_num_rows($query) > 0){
             while($row = mysqli_fetch_assoc($query)){
+                $date1 = new DateTime($row['timestamp']);
+                $date = new DateTime("now");
+                $interval = $date->diff($date);
+                //echo $interval->days;
+                $display = true;
+                if($_COOKIE["disappearing_messages"]=="on" and ($interval->days>=1)) {
+                    $display = false;
+                }
+
+                if($display){
                 if($row['outgoing_msg_id'] === $outgoing_id){
                     if ($row['isimg']==0){
                     $output .= '<div class="chat outgoing">
@@ -44,6 +54,7 @@
                                 </div>';
                     }
                 }
+            }
             }
         }else{
             $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>';

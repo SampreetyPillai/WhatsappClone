@@ -1,2 +1,3 @@
 cd VideoChat
-nodemon server
+pwd
+node server

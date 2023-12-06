@@ -54,8 +54,7 @@ CREATE TABLE `users` (
   `last_seen` datetime
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-create table gc(msg_id int PRIMARY KEY AUTO_INCREMENT, outgoing_msg
-_id int, msg varchar(1000), isimg int, timestamp datetime);
+create table gc(msg_id int PRIMARY KEY AUTO_INCREMENT, outgoing_msg_id int, msg varchar(1000), isimg int, timestamp datetime);
 --
 -- Indexes for dumped tables
 --

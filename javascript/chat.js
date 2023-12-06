@@ -3,6 +3,7 @@ incoming_id = form.querySelector(".incoming_id").value,
 inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),
 chatBox = document.querySelector(".chat-box");
+disappearingMessages = document.getElementById("disappearing");
 
 form.onsubmit = (e)=>{
     e.preventDefault();
@@ -60,4 +61,30 @@ setInterval(() =>{
 function scrollToBottom(){
     chatBox.scrollTop = chatBox.scrollHeight;
   }
+  
+function getCookieValue(name) 
+  {
+    const regex = new RegExp(`(^| )${name}=([^;]+)`)
+    const match = document.cookie.match(regex)
+    if (match) {
+      return match[2]
+    }
+ }
+
+ disappearingMessages.onclick = () =>{
+    var current = getCookieValue("disappearing_messages");
+    if(current=="off"){
+        document.cookie = "disappearing_messages=on";
+        //setCookie("disappearing_messages","on", 1);
+        console.log(getCookieValue("disappearing_messages"));
+    }else{
+        document.cookie = "disappearing_messages=off";
+        //setCookie("disappearing_messages","off", 1);
+        console.log(getCookieValue("disappearing_messages"));
+    }
+
+ }
+// disappearingMessages.onclick = ()=>{
+//     setcookie("DisappearingMessage", $value, time()+3600, "/", "example.com");
+//   }
   
