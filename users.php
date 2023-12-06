@@ -28,7 +28,7 @@
         <div class = "user_header_right">
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="fas fa-sign-out-alt logout"></a>
         <a id = "change-theme" class="far fa-sun logout"></a>
-        <a id = "group-chat" class="fas fa-users logout"></a>
+        <a href="gc.php" id = "group-chat" class="fas fa-users logout"></a>
         </div>
       </header>
       <div class="search">

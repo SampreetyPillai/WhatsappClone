@@ -35,8 +35,8 @@
         <input type="hidden" name="param2" value="value2"> -->
 
         <!-- The button with the download icon -->
-        <button type="submit" style="padding-left: 170px; color: black; background: none; border: none;">
-            <i class="fas fa-users"></i>
+        <button type="submit" style="padding-left: 250px; color: black; background: none; border: none;">
+            <i class="fas fa-download" ></i>
         </button>
     </form>
 
