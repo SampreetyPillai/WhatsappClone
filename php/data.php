@@ -1,4 +1,15 @@
 <?php
+
+     $output .= '<a href="../gc.php">
+     <div class="content">
+     <img src="php/images/1700979401key.png" alt="">
+     <div class="details">
+         <span>Our Group</span>
+        
+     </div>
+     </div>
+     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
+ </a>';
     while($row = mysqli_fetch_assoc($query)){
         $sql2 = "SELECT * FROM messages WHERE (incoming_msg_id = {$row['unique_id']}
                 OR outgoing_msg_id = {$row['unique_id']}) AND (outgoing_msg_id = {$outgoing_id} 
