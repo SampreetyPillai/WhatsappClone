@@ -26,8 +26,9 @@
           <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
           <p><?php echo $row['status']; ?></p>
           <h6 style="color:grey"><?php echo 'Last seen: '.$row['last_seen']; ?></h6>
-        </div>
+                  
         <form action="php/export.php" method="post">
+
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <!-- Add any data you want to send via POST in hidden input fields -->
         <!-- <input type="hidden" name="param1" value="value1">
@@ -35,9 +36,11 @@
 
         <!-- The button with the download icon -->
         <button type="submit" style="padding-left: 170px; color: black; background: none; border: none;">
-            <i class="fas fa-download"></i>
+            <i class="fas fa-users"></i>
         </button>
     </form>
+
+
       </header>
       <div class="chat-box">
 

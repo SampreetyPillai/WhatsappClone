@@ -24,9 +24,11 @@
             <h6 style="color:grey"><?php echo 'Last seen: '.$row['last_seen']; ?></h6>
           </div>
         </div>
+        
         <div class = "user_header_right">
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="fas fa-sign-out-alt logout"></a>
         <a id = "change-theme" class="far fa-sun logout"></a>
+        <a id = "group-chat" class="fas fa-users logout"></a>
         </div>
       </header>
       <div class="search">

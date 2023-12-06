@@ -1,0 +1,1 @@
+./runVideo.sh & ./runChat.sh 
