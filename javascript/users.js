@@ -2,6 +2,40 @@ const searchBar = document.querySelector(".search input"),
 searchIcon = document.querySelector(".search button"),
 usersList = document.querySelector(".users-list");
 changeTheme = document.querySelector("#change-theme");
+groupChat = document.querySelector("#group-chat");
+
+
+// groupChat.onclick = ()=>{
+//   // Create a new XMLHttpRequest object
+//   var xhr = new XMLHttpRequest();
+
+//   // Configure it: POST-request for the PHP file
+//   xhr.open("POST", "php/Group-chat.php", true);
+
+
+//   // Get the PHP session variable value
+//   var sessionValue = "<?php echo isset($_SESSION['unique_id']) ? $_SESSION['unique_id'] : ''; ?>";
+
+//   // Define the data to be sent
+//   var postData = JSON.stringify({ sessionValue: sessionValue });
+
+//   // Define what happens on successful data submission
+//   xhr.onload = function() {
+//       if (xhr.status == 200) {
+//           console.log("POST request successful");
+//           // Handle the response from the server if needed
+//       }
+//   };
+
+//   // Define what happens in case of an error
+//   xhr.onerror = function() {
+//       console.error("Error during POST request");
+//   };
+
+//   // Send the request with the data
+//   xhr.send(postData);
+// };
+
 
 changeTheme.onclick = ()=>{
 var theme  = localStorage.getItem('theme');
