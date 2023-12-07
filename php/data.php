@@ -36,5 +36,18 @@
                     </div>
                     <div class="status-dot '. $offline .'"><i class="fas fa-circle"></i></div>
                 </a>';
+        $tname = $row['fname']. "_" . $row['lname'];
+       // echo $tname;
+        //echo $_COOKIE[$tname];
+        //if(isset()){echo "asdfsd";};
+        //echo "<script type=\"text/javascript\">alert('Your message Here');</script>"; 
+        if($_COOKIE[$tname]=="notify"){
+            //setcookie($tname, "no", time()+86400, "/");
+            //echo "asfarfwererqerqwer";
+            echo '<div class = "content details">
+            <p><span style = "color:blue;"> You have notifications from '.$tname.'</span> </p><br>
+            </div>';
+
+        }
     }
 ?>

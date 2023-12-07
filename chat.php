@@ -26,6 +26,10 @@
           <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
           <p><?php echo $row['status']; ?></p>
           <h6 style="color:grey"><?php echo 'Last seen: '.$row['last_seen']; ?></h6>
+          <?php 
+          $tname = $row['fname']. "_" . $row['lname'];
+          setcookie($tname, "no", time()+86400, "/");
+          ?>
                   
         <form action="php/export.php" method="post">
 

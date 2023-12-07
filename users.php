@@ -18,7 +18,7 @@
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="fas fa-sign-out-alt logout"></a>
         <a id = "change-theme" class="far fa-sun logout"></a>
         <a href="gc.php" id = "group-chat" class="fas fa-plus logout"></a>
-        <a href="edit_index.php" id = "settings" class="fa fa-pencil logout"></a>
+        <a href="edit_index.php" id = "settings" class="fas fa-pencil-alt logout"></a>
 </header>
   </div>
   <div class="wrapper">
@@ -30,6 +30,8 @@
             if(mysqli_num_rows($sql) > 0){
               $row = mysqli_fetch_assoc($sql);
             }
+            $value = $row['fname'].'_'.$row['lname'];
+            setcookie("curruser",$value, time()+86400, "/");
           ?>
           <img src="php/images/<?php echo $row['img']; ?>" alt="">
           <div class="details">

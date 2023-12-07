@@ -31,7 +31,14 @@ sendBtn.onclick = ()=>{
     }
     let formData = new FormData(form);
     xhr.send(formData);
+    var username = getCookieValue("curruser");
+    //username+="true";
+    var v = username + "=notify";
+    document.cookie=v;
+    console.log(v);
+    console.log("adfsd", getCookieValue(getCookieValue("curruser")));
 }
+
 chatBox.onmouseenter = ()=>{
     chatBox.classList.add("active");
 }
