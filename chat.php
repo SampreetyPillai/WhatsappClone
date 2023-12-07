@@ -52,16 +52,20 @@
 
 
       </header>
-
+      <a id = "link"></a>
       <div class="chat-box">
 
       </div>
+      <!-- <audio id = "audio_player" visibility="hidden" controls></audio> -->
+      
       <form action="#" class="typing-area">
       
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
         <input type="text" name="message" class="input-field" placeholder="Type a message here..." autocomplete="off">
         <button><i class="fab fa-telegram-plane"></i></button>
         <a type = "button" target = "_blank" href = <?php echo 'http://localhost:3030/video';?> class = "fas fa-video"></a>
+        <a id="btnStart" type = "button" class = "fas fa-volume-down"></a>
+        
 
 
         <label for="file-upload" name class="custom-file-upload"><i class="fas fa-paperclip"></i></label>
@@ -69,6 +73,14 @@
 
 
       </form>
+
+<!--for record-->
+
+<!--'controls' use for add 
+	play, pause, and volume-->
+
+<!--for play the audio-->
+<!-- <audio id="audioPlay" controls></audio> -->
       
       
     </section>
